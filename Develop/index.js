@@ -1,11 +1,11 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer')
+const generateMarkdown = require('./utils/generateMarkdown')
 
 const fs = require('fs')
 
 // TODO: Create an array of questions for user input
 const questions = [
-    inquirer.createPromptModule([
         {
             type: "input", 
             name: "Project Title", 
@@ -32,14 +32,19 @@ const questions = [
             message: "Describe your contribution guidelines"
         }, 
         {
+            type: "input",
+            name: "Email", 
+            message: "For questons (email)?"
+        }, 
+        {
             type: "list", 
             name: "License", 
             message: "Choose the license you will be using:",
-            choices: ['nonsense', 'irritating', 'how should I know']
+            choices: ['MIT', 'ISC', 'GNUPLv3'],
+            filter(val){
+                return val.toLowerCase();
+            }
         }
-    ]).then((response) => {
-        const readmeData = response
-    })
 ];
 
 // TODO: Create a function to write README file
