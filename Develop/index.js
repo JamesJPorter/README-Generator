@@ -1,6 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer')
-const generateMarkdown = require('./utils/generateMarkdown')
+const createMarkdown = require('./utils/generateMarkdown')
 
 const fs = require('fs')
 
@@ -8,27 +8,27 @@ const fs = require('fs')
 const questions = [
         {
             type: "input", 
-            name: "Project Title", 
+            name: "Title", 
             message: "What is the title of your project?"
         }, 
         {
             type: "input", 
-            name: "Project Description", 
+            name: "Description", 
             message: "Describe your project"
         }, 
         {
             type: "input", 
-            name: "Installation instructions", 
+            name: "Installation", 
             message: "Describe how to install your project"
         }, 
         {
             type: "input", 
-            name: "User Instructions", 
+            name: "Instructions", 
             message: "Describe how to use your app - provide instructions"
         }, 
         {
             type: "input",
-            name: "Contribution Guidelines", 
+            name: "Contribution", 
             message: "Describe your contribution guidelines"
         }, 
         {
@@ -40,7 +40,7 @@ const questions = [
             type: "list", 
             name: "License", 
             message: "Choose the license you will be using:",
-            choices: ['MIT', 'ISC', 'GNUPLv3'],
+            choices: ['MIT', 'MPL', 'GPLv3', 'NONE'],
             filter(val){
                 return val.toLowerCase();
             }
@@ -49,8 +49,19 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    
+    return inquirer.prompt(data) 
+    .then((data) => {
+        const answers = createMarkdown(data)
+        console.log(data)
+        console.log(answers)
+        fs.writeFile(fileName, answers, (error) => {
+            error ? console.log(error) : console.log("success!")
+        })
+        return data 
+    })
 }
+
+writeToFile ('README.md', questions)
 
 // TODO: Create a function to initialize app
 function init() {}
