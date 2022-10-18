@@ -40,29 +40,34 @@ ${console.log(data.license)}
 
   ## Table of Contents 
   - [Project Description](#Description)
-  - [Usage](#Usage)
-  - [Contribution](#Contribution)
   - [Installation](#Installation)
-  - [Questions](#Questions)
+  - [Usage](#Usage)
   - [License](#License)
+  - [Contribution](#Contribution)
+  - [Tests](#Tests)
+  - [Questions](#Questions)
 
   ## Description
   ${data.Description}
 
-  ## Usage 
-  ${data.Instructions}
-
   ## Installation 
   ${data.Installation}
+
+  ## Usage 
+  ${data.Usage}
+
+  ## License 
+  ${renderLicenseSection(data.License)}
 
   ## Contribution 
   ${data.Contribution}
 
-  ## Questions 
-  ${data.Email}
+  ## Tests 
+  ${data.Tests}
 
-  ## License 
-  ${renderLicenseSection(data.License)}
+  ## Questions 
+  ###${data.QuestionsEmail}
+  ###${data.QuestionsGithub}
 `;
 }
 

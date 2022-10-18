@@ -14,32 +14,42 @@ const questions = [
         {
             type: "input", 
             name: "Description", 
-            message: "Describe your project"
+            message: "Describe your project: "
         }, 
         {
             type: "input", 
             name: "Installation", 
-            message: "Describe how to install your project"
+            message: "Describe how to install your project: "
         }, 
         {
             type: "input", 
-            name: "Instructions", 
-            message: "Describe how to use your app - provide instructions"
+            name: "Usage", 
+            message: "Describe how to use your app - provide instructions: "
         }, 
         {
             type: "input",
             name: "Contribution", 
-            message: "Describe your contribution guidelines"
+            message: "Describe your contribution guidelines: "
         }, 
         {
             type: "input",
-            name: "Email", 
-            message: "For questons (email)?"
+            name: "QuestionsEmail", 
+            message: "For questons via email: "
+        }, 
+        {
+            type: "input",
+            name: "QuestionsGithub", 
+            message: "For questons via Github: "
+        }, 
+        {
+            type: "input",
+            name: "Tests", 
+            message: "Tests:"
         }, 
         {
             type: "list", 
             name: "License", 
-            message: "Choose the license you will be using:",
+            message: "Choose the license you will be using: ",
             choices: ['MIT', 'MPL', 'GPLv3', 'NONE'],
             filter(val){
                 return val.toLowerCase();
@@ -61,10 +71,11 @@ function writeToFile(fileName, data) {
     })
 }
 
-writeToFile ('README.md', questions)
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    writeToFile ('README.md', questions)
+}
 
 // Function call to initialize app
 init();
