@@ -1,44 +1,38 @@
-# README Generator
-
+# Demonstrator
 undefined
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Table of Contents
+  ## Table of Contents 
+  - [Project Description](#Description)
+  - [Installation](#Installation)
+  - [Usage](#Usage)
+  - [License](#License)
+  - [Contribution](#Contribution)
+  - [Tests](#Tests)
+  - [Questions](#Questions)
 
-- [Project Description](#Description)
-- [Installation](#Installation)
-- [Usage](#Usage)
-- [License](#License)
-- [Contribution](#Contribution)
-- [Tests](#Tests)
-- [Questions](#Questions)
+  ## Description
+  I am demonstrating my app
 
-## Description
+  ## Installation 
+  Download the code for the app from the Github repo linked below: 
 
-This application allows its user to efficiently creates a high quality README file for any project of their choosing and save that README to their local developement environment.
+  https://github.com/JamesJPorter/README-Generator
 
-## Installation
+  ## Usage 
+  Open the directory containing the applications code. From there, open a terminal and navigate to the folder containing the apps Index.js. Once inside of this folder, invoke the index.js via the following: "node index.js". For an example of how to use the application watch the following video: 
 
-To install README Generator, download all files contained in the linked Github repo. Open the primary directory in your local environment via VSCode and open a new Gitbash terminal. Once you have opened a terminal navigate to the relevant directory. You are now ready to utilize  
-the app.
+  https://drive.google.com/file/d/1Pg6kaCHdZTvp4yN0-apvPhJKjKDS7Z2q/view?usp=sharing
 
-## Usage
+  ## License 
+  Licensed udner the [MIT](https://opensource.org/licenses/MIT) license
 
-To use the app, open your terminal inside of the opened app directory via VSCode. Use command pwd to ensure you are in the correct directory. Once this is confirmed, invoke the app using Node.js by typing the following "Node.js index.js". This will start the app within your terminal. You will now be prompted to answer a serises of quiestions. Answer these questions to completion and your README.md will be created and saved to your local environment!
+  ## Contribution 
+  N/A
 
-## License
+  ## Tests 
+  N/A
 
-Licensed udner the [MIT](https://opensource.org/licenses/MIT) license
-
-## Contribution
-
-N/A
-
-## Tests
-
-N/A
-
-## Questions
-
-#### porterjjames@gmail.com
-#### https://github.com/JamesJPorter
+  ## Questions 
+  ###porterjjames@gmail.com
+  ###mygithub
